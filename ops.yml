@@ -1,7 +1,7 @@
 version: "1"
 services:
   - name: newapp:0.1.0
-    description: my app description is cool 
+    description: my app description
     run: node /ops/index.js
     port: [ '8080:8080' ]
     domain: ""
@@ -9,7 +9,7 @@ services:
       static:
         - DB_PORT=5050
     events:
-     - "github:nf162021/nf162021:commit_comment.created:ref==main"
+     - "github:nf162021/nf162021:delete.branch:ref==test"
     trigger:
      - build
      - publish

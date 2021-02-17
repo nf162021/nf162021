@@ -1,7 +1,7 @@
 version: "1"
 services:
   - name: newapp:0.1.0
-    description: my app description
+    description: my app description is cool 
     run: node /ops/index.js
     port: [ '8080:8080' ]
     domain: ""

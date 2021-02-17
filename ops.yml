@@ -1,0 +1,16 @@
+version: "1"
+services:
+  - name: newapp:0.1.0
+    description: my app description
+    run: node /ops/index.js
+    port: [ '8080:8080' ]
+    domain: ""
+    env:
+      static:
+        - DB_PORT=5050
+    events:
+     - "github:nf162021/nf162021:push:ref==main"
+    trigger:
+     - build
+     - publish
+     - start
